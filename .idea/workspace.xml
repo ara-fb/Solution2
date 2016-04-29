@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6303585-09d0-4bc8-b6cc-690f8c967514" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/di.py" afterPath="$PROJECT_DIR$/DataInterpreter/di.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/validate.py" afterPath="$PROJECT_DIR$/DataInterpreter/validate.py" />
     </list>
     <ignored path="Solution2.iws" />
@@ -34,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcceptanceTests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AcceptanceTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0154373925">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -72,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
+              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
               <folding>
                 <element signature="e#41#50#0" expanded="true" />
               </folding>
@@ -80,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validate.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="validate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataInterpreter/validate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.41852486">
+              <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -141,8 +142,8 @@
         <option value="$PROJECT_DIR$/DataInterpreter/GetData.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/dicmd.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
-        <option value="$PROJECT_DIR$/DataInterpreter/di.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/validate.py" />
+        <option value="$PROJECT_DIR$/DataInterpreter/di.py" />
       </list>
     </option>
   </component>
@@ -571,22 +572,16 @@
       <option name="project" value="LOCAL" />
       <updated>1461896032442</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="__removed duplicated code by putting in a validate_field method">
+      <created>1461896416905</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1461896416905</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 04m 30s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 05m 51s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 06m 57s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 10m 43s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 11m 30s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
@@ -605,6 +600,18 @@
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 19m 36s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 37m 53s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 14h 53m 53s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 15h 04m 47s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 15h 07m 02s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -613,10 +620,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.2752976" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4940476" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.28422618" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.090016365" sideWeight="0.48809522" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.72470236" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.7157738" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -651,7 +658,8 @@
     <MESSAGE value="made wash code more easy ro read by creating a washfield function." />
     <MESSAGE value="made wash code more easy ro read by creating a washfield function. Tests Pass" />
     <MESSAGE value="extractMethod makinng validateeasier to read - creating validate_age()... and so on functions&#10;tests pass" />
-    <option name="LAST_COMMIT_MESSAGE" value="extractMethod makinng validateeasier to read - creating validate_age()... and so on functions&#10;tests pass" />
+    <MESSAGE value="__removed duplicated code by putting in a validate_field method" />
+    <option name="LAST_COMMIT_MESSAGE" value="__removed duplicated code by putting in a validate_field method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -762,14 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/dicontroller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/dipersistence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -788,31 +788,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/dicontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
           <folding>
             <element signature="e#41#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/validate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0154373925">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41852486">
+          <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>

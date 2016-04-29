@@ -11,10 +11,10 @@ class Validator:
              'sales': '[0-9]{3}',
              'bmi': '(Normal|Overweight|Obesity|Underweight)',
              'income': '[0-9]{2,3}'}
+    INPUT_ORDER = ['id','gender','age', 'sales','bmi','income']
 
     def __wash_field(self, field_str):
         return field_str.strip().capitalize()
-
 
     def wash(self, input_list):
         """return washed  data"""
@@ -29,28 +29,28 @@ class Validator:
         finally:
             return washed
 
-    def __validate_field(self, rule, field_str):
-        return re.fullmatch(rule, field_str)
+    def __validate_field(self, field_name, field_str):
+        if re.fullmatch(self.RULES.get(field_name), field_str):
+            return True
+        return False
 
     def validated(self, washed_list):
         """
         wash and validate data using re patterns
         if The input_list is valid return input_list else return None
         data that raises an exception returns None
-        :return: Validated input_list or None
+        :return: is_valid , validated
         """
-        validated = None
         try:
-            if self.__validate_field(self.RULES.get('id'), washed_list[0]) and \
-               self.__validate_field( self.RULES.get('gender'),washed_list[1]) and \
-               self.__validate_field( self.RULES.get('age'), washed_list[2]) and \
-               self.__validate_field( self.RULES.get('sales'), washed_list[3]) and \
-               self.__validate_field(self.RULES.get('bmi'), washed_list[4])and \
-               self.__validate_field( self.RULES.get('income'),washed_list[5]):
-                validated = washed_list
+            for index in range(6):
+                if not self.__validate_field(self.INPUT_ORDER[index], washed_list[index]):
+                    result = False, None
+                    break
+            else:
+                result = True, washed_list
         except TypeError:
-            pass
+             result = False, None
         except IndexError:
-            pass
+             result = False, None
         finally:
-            return validated
+            return result

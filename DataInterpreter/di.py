@@ -48,8 +48,9 @@ class DataInterpreter:
         invalid_data_ids = []
         status = []
         for data_list in all_data:
-            if self.__validated(data_list):
-                self.__valid_records.append(self.__validated(data_list))
+            is_valid, validated = self.__validated(data_list)
+            if is_valid:
+                self.__valid_records.append(validated)
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
