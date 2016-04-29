@@ -12,16 +12,16 @@ class Validator:
              'bmi': '(Normal|Overweight|Obesity|Underweight)',
              'income': '[0-9]{2,3}'}
 
+    def __wash_field(self, field_str):
+        return field_str.strip().capitalize()
+
+
     def wash(self, input_list):
         """return washed  data"""
         washed = []
         try:
             for in_str in input_list:
-                washed.append(str(in_str.strip()))
-            # fix case on alphabetic characters
-            washed[0] = washed[0].upper()
-            washed[1] = washed[1].upper()
-            washed[4] = washed[4].capitalize()
+                washed.append(in_str.strip().capitalize())
         except TypeError:
             raise
         except IndexError:
