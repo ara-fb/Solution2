@@ -1,36 +1,46 @@
 import re
 
+class FieldValidator:
+    def __init__(self, name, rule, input_order):
+        self.__name = name
+        self.__rule = rule
+        self.__input_order = input_order
+
+    def wash(self, field_str):
+        return field_str.strip().capitalize()
+
+    def validate(self, field_str):
+        return re.fullmatch(self.__rule, field_str)
 
 class Validator:
     """
-    wash and validate data
+    wash and validate data for a  single record
     """
-    RULES = {'id': '[A-Z][0-9]{3}',
-             'gender': '(M|F)',
-             'age': '[0-9]{2}',
-             'sales': '[0-9]{3}',
-             'bmi': '(Normal|Overweight|Obesity|Underweight)',
-             'income': '[0-9]{2,3}'}
+    def __init__(self):
+        self.fields = []
+        self.__add_all_fields()
 
-    def __wash_field(self, field_str):
-        return field_str.strip().capitalize()
+    def __add_all_fields(self):
+        self.fields.append(FieldValidator('id', '[A-Z][0-9]{3}', 0))
+        self.fields.append(FieldValidator('gender', '(M|F)', 1))
+        self.fields.append(FieldValidator('age', '[0-9]{2}', 2))
+        self.fields.append(FieldValidator('sales', '[0-9]{3}', 3))
+        self.fields.append(FieldValidator('bmi', '(Normal|Overweight|Obesity|Underweight)', 4))
+        self.fields.append(FieldValidator('income', '[0-9]{2,3}', 5))
+
 
     def wash(self, input_list):
         """return washed  data"""
         washed = []
         try:
-            for in_str in input_list:
-                washed.append(in_str.strip().capitalize())
+            for field, data in zip(self.fields, input_list):
+                washed.append(field.wash(data))
         except TypeError:
             raise
         except IndexError:
             raise
         finally:
             return washed
-
-    def __validate_field(self, field_name, field_str):
-        return re.fullmatch(self.RULES.get(field_name), field_str)
-
 
     def validated(self, washed_list):
         """
@@ -39,17 +49,16 @@ class Validator:
         data that raises an exception returns None
         :return: is_valid , validated
         """
-        input_order = ['id','gender','age', 'sales','bmi','income']
+        result = False, None
         try:
-            for index in range(6):
-                if not self.__validate_field(input_order[index], washed_list[index]):
-                    result = False, None
+            for field, data in zip(self.fields, washed_list):
+                if not field.validate(data):
                     break
             else:
                 result = True, washed_list
         except TypeError:
-             result = False, None
+             pass
         except IndexError:
-             result = False, None
+             pass
         finally:
             return result
