@@ -1,6 +1,6 @@
 import unittest
-from DataInterpreter import di
-from DataInterpreter import dipersistence
+import di
+import dipersistence
 from unittest.mock import MagicMock
 
 
@@ -25,8 +25,10 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_id_data(self):
         file_contents = [['j487', 'M', '76', '274', 'Underweight', '956'],
@@ -42,9 +44,11 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         # self.mock_load.assert_called_with(file_path)
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_gender_data(self):
         file_contents = [['S605', ' M ', '05', '636', 'Obesity', '313'],
@@ -63,9 +67,11 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         # self.mock_load.assert_called_with(file_path)
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_age_data(self):
         file_contents = [['W605', 'M', '5', '636', 'Obesity', '313'],
@@ -80,8 +86,10 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_sales_data(self):
         file_contents = [['W605', 'M', '05', '63', 'Obesity', '313'],
@@ -94,8 +102,10 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_bmi_data(self):
         # !should actually be repeated with invalid vales for each value
@@ -114,8 +124,10 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
     def test_load_records_with_invalid_income_data(self):
         file_contents = [['W605', 'M', '05', '636', 'Obesity', '3130'],
@@ -129,10 +141,48 @@ class AcceptanceTestsModel(unittest.TestCase):
         self.di.load_csv(file_path)
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
+        self.assertTrue(contains_valid_records)
 
+    def test_load_records_with_only_invalid_data(self):
+        file_contents = [['W605', 'M', '05', '636', 'Obesity', '3130'],
+                         ['E448', 'M', '97', '766', 'Underweight', '2'],
+                         ['C722', 'M', '26', '388', 'Underweight', '']]
+        expected_data = []
+        expected_status = "0 records added\n3 invalid records skipped\nInvalid data at id = W605 E448 C722"
+        self.mock_load.return_value = file_contents
+        file_path = 'some_file.csv'
+        self.di.load_csv(file_path)
+        actual_data = self.di.get_all_valid_records()
+        actual_status = self.di.get_load_status()
+        contains_valid_records = self.di.contains_valid_records()
+        self.assertSequenceEqual(actual_data, expected_data)
+        self.assertEquals(expected_status, actual_status)
+        self.assertFalse(contains_valid_records)
 
+    def test_get_valid_id_data(self):
+        file_contents = [['W605', 'M', '05', '636', 'Obesity', '313'],
+                         ['E448', 'M', '97', '766', 'Underweight', '248'],
+                         ['C722', 'M', '26', '388', 'Underweight', '22']]
+        expected_data = ['W605','E448', 'C722']
+        self.mock_load.return_value = file_contents
+        file_path = 'some_file.csv'
+        self.di.load_csv(file_path)
+        actual_data = self.di.get_valid_data('id')
+        self.assertSequenceEqual(actual_data, expected_data)
+
+    def test_get_valid_id_data(self):
+        file_contents = [['W605', 'M', '05', '636', 'Obesity', '313'],
+                         ['E448', 'M', '97', '766', 'Underweight', '248'],
+                         ['C722', 'M', '26', '388', 'Underweight', '22']]
+        expected_data = ['M','M', 'M']
+        self.mock_load.return_value = file_contents
+        file_path = 'some_file.csv'
+        self.di.load_csv(file_path)
+        actual_data = self.di.get_valid_data('gender')
+        self.assertSequenceEqual(actual_data, expected_data)
 
 if __name__ == '__main__':
     unittest.main()

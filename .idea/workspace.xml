@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6303585-09d0-4bc8-b6cc-690f8c967514" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataInterpreter/Test/runner.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test coverage results.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py" afterPath="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/DataInterpreter/Test/runner.py" afterPath="$PROJECT_DIR$/DataInterpreter/runner.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Solution2.iws" />
@@ -29,17 +30,17 @@
         <entry file="file://$PROJECT_DIR$/DataInterpreter/dipersistence.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AcceptanceTests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py">
+        <entry file="file://$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61559886">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47157896">
+              <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -58,7 +59,7 @@
         </entry>
       </file>
       <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataInterpreter/Test/runner.py">
+        <entry file="file://$PROJECT_DIR$/DataInterpreter/runner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
@@ -85,7 +86,17 @@
         <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dicontroller.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataInterpreter/dicontroller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,8 +107,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Unit Test" />
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -116,6 +127,9 @@
         <option value="$PROJECT_DIR$/Test/runner.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/Test/runner.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py" />
+        <option value="$PROJECT_DIR$/DataInterpreter/dipersistence.py" />
+        <option value="$PROJECT_DIR$/DataInterpreter/GetData.py" />
+        <option value="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
       </list>
     </option>
   </component>
@@ -197,24 +211,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Solution2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Solution2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataInterpreter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -227,32 +223,16 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DataInterpreter" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Solution2\DataInterpreter" />
       <recent name="C:\Solution2" />
       <recent name="C:\Solution2\DataInterpreter\Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Nosetests in AcceptanceTests">
-    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataInterpreter/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Solution2" />
-      <option name="SCRIPT_NAME" value="C:\Users\FB\PycharmProjects\Solution2\DataInterpreter\tests\runner.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Nosetests in AcceptanceTests (1)">
     <configuration default="false" name="dicmd" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,7 +283,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Solution2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataInterpreter/Test/runner.py" />
+      <option name="SCRIPT_NAME" value="C:\Solution2\DataInterpreter\runner.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -318,7 +298,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Solution2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py" />
+      <option name="SCRIPT_NAME" value="C:\Solution2\DataInterpreter\AcceptanceTests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in AcceptanceTests (1)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataInterpreter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Solution2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -452,19 +453,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="1" class="java.lang.String" itemvalue="Python.dicmd" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in Test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.runner" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests" />
+      <item index="0" class="java.lang.String" itemvalue="Python.dicmd" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.runner" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python.runner" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in Test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="4" class="java.lang.String" itemvalue="Python.dicmd" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dicmd" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in AcceptanceTests" />
+        <item index="3" class="java.lang.String" itemvalue="Python.runner" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Test" />
       </list>
     </recent_temporary>
   </component>
@@ -503,7 +504,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461887715800</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="...">
+      <created>1461888476423</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1461888476423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -519,21 +526,36 @@
     <history-entry file="Nosetests_in_AcceptanceTests - 2016.04.29 at 12h 07m 06s.xml">
       <configuration name="Nosetests in AcceptanceTests" configurationId="tests" />
     </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests - 2016.04.29 at 12h 11m 20s.xml">
+      <configuration name="Nosetests in AcceptanceTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 32m 12s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 32m 25s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 39m 52s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 40m 06s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
     <history-entry file="Nosetests_in_Test - 2016.04.29 at 11h 19m 35s.xml">
       <configuration name="Nosetests in Test" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3666121" sideWeight="0.26636904" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1767594" sideWeight="0.26636904" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4940476" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3666121" sideWeight="0.73363096" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1767594" sideWeight="0.73363096" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -648,10 +670,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/runner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/dicontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/dipersistence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -666,36 +714,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/Test/runner.py">
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/dipersistence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/.idea/modules.xml">
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/Test/AcceptanceTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61559886">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47157896">
+          <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
