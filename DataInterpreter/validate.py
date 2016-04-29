@@ -29,6 +29,25 @@ class Validator:
         finally:
             return washed
 
+    def __validate_id(self,id_str):
+        return re.fullmatch(self.RULES.get('id'), id_str)
+
+    def __validate_gender(self, gender_str):
+        return re.fullmatch(self.RULES.get('gender'), gender_str)
+
+    def __validate_age(self, age_str):
+        return re.fullmatch(self.RULES.get('age'), age_str)
+
+    def __validate_sales(self, sales_str):
+        return re.fullmatch(self.RULES.get('sales'), sales_str)
+
+    def __validate_bmi(self, bmi_str):
+        return re.fullmatch(self.RULES.get('bmi'), bmi_str)
+
+    def __validate_income(self, income_str):
+        return re.fullmatch(self.RULES.get('income'), income_str)
+
+
     def validated(self, washed_list):
         """
         wash and validate data using re patterns
@@ -38,12 +57,12 @@ class Validator:
         """
         validated = None
         try:
-            if re.fullmatch(self.RULES.get('id'), washed_list[0]) and \
-               re.fullmatch(self.RULES.get('gender'), washed_list[1]) and \
-               re.fullmatch(self.RULES.get('age'), washed_list[2]) and \
-               re.fullmatch(self.RULES.get('sales'), washed_list[3]) and \
-               re.fullmatch(self.RULES.get('bmi'), washed_list[4])and \
-               re.fullmatch(self.RULES.get('income'), washed_list[5]):
+            if self.__validate_id( washed_list[0]) and \
+               self.__validate_gender( washed_list[1]) and \
+               self.__validate_age( washed_list[2]) and \
+               self.__validate_sales( washed_list[3]) and \
+               self.__validate_bmi( washed_list[4])and \
+               self.__validate_income( washed_list[5]):
                 validated = washed_list
         except TypeError:
             pass
