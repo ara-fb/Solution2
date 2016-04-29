@@ -11,7 +11,6 @@ class Validator:
              'sales': '[0-9]{3}',
              'bmi': '(Normal|Overweight|Obesity|Underweight)',
              'income': '[0-9]{2,3}'}
-    INPUT_ORDER = ['id','gender','age', 'sales','bmi','income']
 
     def __wash_field(self, field_str):
         return field_str.strip().capitalize()
@@ -30,9 +29,8 @@ class Validator:
             return washed
 
     def __validate_field(self, field_name, field_str):
-        if re.fullmatch(self.RULES.get(field_name), field_str):
-            return True
-        return False
+        return re.fullmatch(self.RULES.get(field_name), field_str)
+
 
     def validated(self, washed_list):
         """
@@ -41,9 +39,10 @@ class Validator:
         data that raises an exception returns None
         :return: is_valid , validated
         """
+        input_order = ['id','gender','age', 'sales','bmi','income']
         try:
             for index in range(6):
-                if not self.__validate_field(self.INPUT_ORDER[index], washed_list[index]):
+                if not self.__validate_field(input_order[index], washed_list[index]):
                     result = False, None
                     break
             else:
