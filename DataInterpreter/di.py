@@ -9,12 +9,6 @@ class DataInterpreter:
     load data from a file and validate.
     extract data by type
     """
-    RULES = {'id': '[A-Z][0-9]{3}',
-             'gender': '(M|F)',
-             'age': '[0-9]{2}',
-             'sales': '[0-9]{3}',
-             'bmi': '(Normal|Overweight|Obesity|Underweight)',
-             'income': '[0-9]{2,3}'}
     RECORD_COLUMNS = ['id', 'gender', 'age', 'sales', 'bmi', 'income']
 
     def __init__(self, persistence, validator):
@@ -63,10 +57,8 @@ class DataInterpreter:
 
     def __validated(self, input_list):
         """
-        wash and validate data using re patterns
-        if The input_list is valid return input_list else return None
-        data that raises an exception returns None
-        :return: Validated input_list or None
+        wash and validate data using Validator object
+        :return: is_valid, validated_list
         """
         washed_list = self.__validator.wash(input_list)
         return self.__validator.validated(washed_list)
