@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6303585-09d0-4bc8-b6cc-690f8c967514" name="Default" comment="made wash code more easy ro read by creating a">
+    <list default="true" id="d6303585-09d0-4bc8-b6cc-690f8c967514" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/validate.py" afterPath="$PROJECT_DIR$/DataInterpreter/validate.py" />
     </list>
     <ignored path="Solution2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -553,7 +552,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461894404374</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made wash code more easy ro read by creating a washfield function.">
+      <created>1461894748665</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1461894748665</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -630,7 +635,8 @@
     <MESSAGE value="pushing before I start refactorig" />
     <MESSAGE value="Replace method with method object - DataInterpreter.__validated() code removed to seperate validate.Validator class &#10;Tests Pass" />
     <MESSAGE value="extract method - remove code to wash data from validated function and put in wash function&#10;Tests Pass&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract method - remove code to wash data from validated function and put in wash function&#10;Tests Pass&#10;" />
+    <MESSAGE value="made wash code more easy ro read by creating a washfield function." />
+    <option name="LAST_COMMIT_MESSAGE" value="made wash code more easy ro read by creating a washfield function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
