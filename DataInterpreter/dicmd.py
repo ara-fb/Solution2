@@ -1,5 +1,6 @@
 import cmd
 import di
+import validate
 import dicontroller
 import dipersistence
 import chart
@@ -101,6 +102,6 @@ class DataInterpreterCmd(cmd.Cmd):
 # app/ instantiate and go
 if __name__ == '__main__':
     view = DataInterpreterCmd()
-    controller = dicontroller.Controller(di.DataInterpreter(dipersistence.DiPersistence()), view, chart.ChartView())
+    controller = dicontroller.Controller(di.DataInterpreter(dipersistence.DiPersistence(), validate.Validator()), view, chart.ChartView())
     view.register_controller(controller)
     view.cmdloop()

@@ -17,8 +17,9 @@ class DataInterpreter:
              'income': '[0-9]{2,3}'}
     RECORD_COLUMNS = ['id', 'gender', 'age', 'sales', 'bmi', 'income']
 
-    def __init__(self, persistence):
+    def __init__(self, persistence, validator):
         self.__valid_records = []
+        self.__validator = validator
         self.__persistence = persistence
         self.__load_status = ""
 
@@ -66,28 +67,7 @@ class DataInterpreter:
         data that raises an exception returns None
         :return: Validated input_list or None
         """
-        validated = None
-        washed = []
-        try:
-            for in_str in input_list:
-                washed.append(str(in_str.strip()))
-            # fix case on alphabetic characters
-            washed[0] = washed[0].upper()
-            washed[1] = washed[1].upper()
-            washed[4] = washed[4].capitalize()
-            if re.fullmatch(self.RULES.get('id'), washed[0]) and \
-               re.fullmatch(self.RULES.get('gender'), washed[1]) and \
-               re.fullmatch(self.RULES.get('age'), washed[2]) and \
-               re.fullmatch(self.RULES.get('sales'), washed[3]) and \
-               re.fullmatch(self.RULES.get('bmi'), washed[4])and \
-               re.fullmatch(self.RULES.get('income'), washed[5]):
-                validated = washed
-        except TypeError:
-            pass
-        except IndexError:
-            pass
-        finally:
-            return validated
+        return self.__validator.validated(input_list)
 
     def get_load_status(self):
         """

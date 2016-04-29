@@ -1,6 +1,7 @@
 import unittest
 import di
 import dipersistence
+import validate
 from unittest.mock import MagicMock
 
 
@@ -10,7 +11,8 @@ class AcceptanceTestsModel(unittest.TestCase):
         persistence = dipersistence.DiPersistence()
         persistence.load_csv = MagicMock()
         self.mock_load = persistence.load_csv
-        self.di = di.DataInterpreter(persistence)
+        valid = validate.Validator()
+        self.di = di.DataInterpreter(persistence, valid)
 
     def test_load_valid_record(self):
         file_contents = [['W605', 'M', '05', '636', 'Obesity', '313'],
