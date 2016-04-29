@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6303585-09d0-4bc8-b6cc-690f8c967514" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataInterpreter/validate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" afterPath="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/di.py" afterPath="$PROJECT_DIR$/DataInterpreter/di.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/dicmd.py" afterPath="$PROJECT_DIR$/DataInterpreter/dicmd.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataInterpreter/validate.py" afterPath="$PROJECT_DIR$/DataInterpreter/validate.py" />
     </list>
     <ignored path="Solution2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="di.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="di.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.8278146">
+              <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
               <folding>
                 <element signature="e#41#50#0" expanded="true" />
               </folding>
@@ -95,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="validate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataInterpreter/validate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6821192">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -143,9 +141,9 @@
         <option value="$PROJECT_DIR$/DataInterpreter/dipersistence.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/GetData.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/dicmd.py" />
-        <option value="$PROJECT_DIR$/DataInterpreter/di.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py" />
         <option value="$PROJECT_DIR$/DataInterpreter/validate.py" />
+        <option value="$PROJECT_DIR$/DataInterpreter/di.py" />
       </list>
     </option>
   </component>
@@ -544,16 +542,16 @@
       <option name="project" value="LOCAL" />
       <updated>1461892335042</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Replace method with method object - DataInterpreter.__validated() code removed to seperate validate.Validator class &#10;Tests Pass">
+      <created>1461893665494</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461893665494</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_in_AcceptanceTests - 2016.04.29 at 12h 11m 20s.xml">
-      <configuration name="Nosetests in AcceptanceTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 32m 12s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 12h 32m 25s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
@@ -576,6 +574,12 @@
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 13h 32m 54s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 13h 45m 05s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.29 at 13h 45m 24s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
   </component>
@@ -619,7 +623,8 @@
     <MESSAGE value="..." />
     <MESSAGE value="test coverage results - 90% coverage for Solution2\DataInterpreter\di.py" />
     <MESSAGE value="pushing before I start refactorig" />
-    <option name="LAST_COMMIT_MESSAGE" value="pushing before I start refactorig" />
+    <MESSAGE value="Replace method with method object - DataInterpreter.__validated() code removed to seperate validate.Validator class &#10;Tests Pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace method with method object - DataInterpreter.__validated() code removed to seperate validate.Validator class &#10;Tests Pass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -756,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
-          <folding>
-            <element signature="e#41#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/AcceptanceTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -778,9 +773,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/validate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6821192">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8278146">
+          <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#41#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

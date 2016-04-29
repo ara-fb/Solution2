@@ -12,14 +12,8 @@ class Validator:
              'bmi': '(Normal|Overweight|Obesity|Underweight)',
              'income': '[0-9]{2,3}'}
 
-    def validated(self, input_list):
-        """
-        wash and validate data using re patterns
-        if The input_list is valid return input_list else return None
-        data that raises an exception returns None
-        :return: Validated input_list or None
-        """
-        validated = None
+    def wash(self, input_list):
+        """return washed  data"""
         washed = []
         try:
             for in_str in input_list:
@@ -28,13 +22,29 @@ class Validator:
             washed[0] = washed[0].upper()
             washed[1] = washed[1].upper()
             washed[4] = washed[4].capitalize()
-            if re.fullmatch(self.RULES.get('id'), washed[0]) and \
-               re.fullmatch(self.RULES.get('gender'), washed[1]) and \
-               re.fullmatch(self.RULES.get('age'), washed[2]) and \
-               re.fullmatch(self.RULES.get('sales'), washed[3]) and \
-               re.fullmatch(self.RULES.get('bmi'), washed[4])and \
-               re.fullmatch(self.RULES.get('income'), washed[5]):
-                validated = washed
+        except TypeError:
+            raise
+        except IndexError:
+            raise
+        finally:
+            return washed
+
+    def validated(self, washed_list):
+        """
+        wash and validate data using re patterns
+        if The input_list is valid return input_list else return None
+        data that raises an exception returns None
+        :return: Validated input_list or None
+        """
+        validated = None
+        try:
+            if re.fullmatch(self.RULES.get('id'), washed_list[0]) and \
+               re.fullmatch(self.RULES.get('gender'), washed_list[1]) and \
+               re.fullmatch(self.RULES.get('age'), washed_list[2]) and \
+               re.fullmatch(self.RULES.get('sales'), washed_list[3]) and \
+               re.fullmatch(self.RULES.get('bmi'), washed_list[4])and \
+               re.fullmatch(self.RULES.get('income'), washed_list[5]):
+                validated = washed_list
         except TypeError:
             pass
         except IndexError:

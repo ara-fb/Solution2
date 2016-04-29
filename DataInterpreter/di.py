@@ -67,7 +67,8 @@ class DataInterpreter:
         data that raises an exception returns None
         :return: Validated input_list or None
         """
-        return self.__validator.validated(input_list)
+        washed_list = self.__validator.wash(input_list)
+        return self.__validator.validated(washed_list)
 
     def get_load_status(self):
         """
