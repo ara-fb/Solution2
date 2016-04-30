@@ -1,12 +1,10 @@
 # DataInterpreter - facade for the Model
-import re
 from csv import Error as csvErr
 from collections import OrderedDict
 
 
 class Record:
-    def __init__(self, data_array):
-        id, gender, age, sales, bmi, income = data_array[0], data_array[1], data_array[2],data_array[3], data_array[4],data_array[5]
+    def __init__(self, id, gender, age, sales, bmi, income):
         self.field_values  = OrderedDict()
         self.field_values['id'] = id
         self.field_values['gender']= gender
@@ -16,8 +14,8 @@ class Record:
         self.field_values['income'] = income
 
     def get_by_name(self, data_name):
-        if data_name in self.field_values:
-            return self.field_values.get(data_name)
+        assert data_name in self.field_values
+        return self.field_values.get(data_name)
 
     def get_all_as_array(self):
         return list(self.field_values.values())
@@ -28,7 +26,7 @@ class DataInterpreter:
     load data from a file and validate.
     extract data by type
     """
-    RECORD_COLUMNS = ['id', 'gender', 'age', 'sales', 'bmi', 'income']
+
 
     def __init__(self, persistence, validator):
         self.__valid_records = []
@@ -63,8 +61,8 @@ class DataInterpreter:
         for data_list in all_data:
             is_valid, validated = self.__validated(data_list)
             if is_valid:
-                record = Record(validated)
-                self.__valid_records.append(record)
+                id, gender, age, sales, bmi, income = validated[0], validated[1], validated[2], validated[3], validated[4],validated[5]
+                self.__valid_records.append(Record(id, gender, age, sales, bmi, income))
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
@@ -96,7 +94,6 @@ class DataInterpreter:
         :param data_name: name of the data
         :return: data_array of valid [data_name] values
         """
-        assert data_name in self.RECORD_COLUMNS
         data_array = []
         for record in self.__valid_records:
             item = record.get_by_name(data_name)
