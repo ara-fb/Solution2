@@ -1,20 +1,26 @@
 # DataInterpreter - facade for the Model
 import re
 from csv import Error as csvErr
+from collections import OrderedDict
 
 
 class Record:
-    RECORD_COLUMNS = ['id', 'gender', 'age', 'sales', 'bmi', 'income']
     def __init__(self, data_array):
-        self.field_values = data_array
+        id, gender, age, sales, bmi, income = data_array[0], data_array[1], data_array[2],data_array[3], data_array[4],data_array[5]
+        self.field_values  = OrderedDict()
+        self.field_values['id'] = id
+        self.field_values['gender']= gender
+        self.field_values['age'] = age
+        self.field_values['sales'] = sales
+        self.field_values['bmi'] = bmi
+        self.field_values['income'] = income
 
     def get_by_name(self, data_name):
-        assert data_name in self.RECORD_COLUMNS
-        item = self.field_values[self.RECORD_COLUMNS.index(data_name)]
-        return item
+        if data_name in self.field_values:
+            return self.field_values.get(data_name)
 
     def get_all_as_array(self):
-        return self.field_values
+        return list(self.field_values.values())
 
 class DataInterpreter:
     """
