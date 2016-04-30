@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#41#72#0" expanded="true" />
               </folding>
@@ -591,19 +591,16 @@
       <option name="project" value="LOCAL" />
       <updated>1461992547550</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="removed RECORD_COLUMNS from di">
+      <created>1461992784781</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1461992784781</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 16h 47m 43s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 16h 49m 57s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 16h 53m 27s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 16h 56m 01s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
@@ -623,6 +620,15 @@
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 17h 05m 59s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 17h 07m 23s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 17h 08m 33s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.04.30 at 17h 09m 32s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
   </component>
@@ -676,7 +682,8 @@
     <MESSAGE value=".." />
     <MESSAGE value="Smell 2 - primitive obsession - replace array with object&#10;step one - wrapped array in an object&#10;tests pass" />
     <MESSAGE value="changed data structure to ordered dict" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed data structure to ordered dict" />
+    <MESSAGE value="removed RECORD_COLUMNS from di" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed RECORD_COLUMNS from di" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -896,7 +903,7 @@
     <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#41#72#0" expanded="true" />
           </folding>

@@ -94,11 +94,8 @@ class DataInterpreter:
         :param data_name: name of the data
         :return: data_array of valid [data_name] values
         """
-        data_array = []
-        for record in self.__valid_records:
-            item = record.get_by_name(data_name)
-            data_array.append(item)
-        return data_array
+        return [record.get_by_name(data_name) for record in  self.__valid_records]
+
 
     def contains_valid_records(self):
         """
@@ -111,7 +108,5 @@ class DataInterpreter:
 
     # for testing purposes
     def get_all_valid_records(self):
-        data_array = []
-        for record in self.__valid_records:
-            data_array.append(record.get_all_as_array())
-        return data_array
+        """only for testsing - return all record data as arrays"""
+        return [record.get_all_as_array() for record in self.__valid_records ]
