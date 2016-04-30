@@ -3,6 +3,19 @@ import re
 from csv import Error as csvErr
 
 
+class Record:
+    RECORD_COLUMNS = ['id', 'gender', 'age', 'sales', 'bmi', 'income']
+    def __init__(self, data_array):
+        self.field_values = data_array
+
+    def get_by_name(self, data_name):
+        assert data_name in self.RECORD_COLUMNS
+        item = self.field_values[self.RECORD_COLUMNS.index(data_name)]
+        return item
+
+    def get_all_as_array(self):
+        return self.field_values
+
 class DataInterpreter:
     """
     Interpret data loaded in from a file
@@ -44,7 +57,8 @@ class DataInterpreter:
         for data_list in all_data:
             is_valid, validated = self.__validated(data_list)
             if is_valid:
-                self.__valid_records.append(validated)
+                record = Record(validated)
+                self.__valid_records.append(record)
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
@@ -78,8 +92,8 @@ class DataInterpreter:
         """
         assert data_name in self.RECORD_COLUMNS
         data_array = []
-        for data in self.__valid_records:
-            item = data[self.RECORD_COLUMNS.index(data_name)]
+        for record in self.__valid_records:
+            item = record.get_by_name(data_name)
             data_array.append(item)
         return data_array
 
@@ -94,4 +108,7 @@ class DataInterpreter:
 
     # for testing purposes
     def get_all_valid_records(self):
-        return self.__valid_records
+        data_array = []
+        for record in self.__valid_records:
+            data_array.append(record.get_all_as_array())
+        return data_array
