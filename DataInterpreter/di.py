@@ -4,6 +4,7 @@ from collections import OrderedDict
 
 
 class Record:
+
     def __init__(self, id, gender, age, sales, bmi, income):
         self.field_values  = OrderedDict()
         self.field_values['id'] = id
@@ -19,6 +20,7 @@ class Record:
 
     def get_all_as_array(self):
         return list(self.field_values.values())
+
 
 class DataInterpreter:
     """
@@ -78,6 +80,7 @@ class DataInterpreter:
         wash and validate data using Validator object
         :return: is_valid, validated_list
         """
+
         washed_list = self.__validator.wash(input_list)
         return self.__validator.validated(washed_list)
 
