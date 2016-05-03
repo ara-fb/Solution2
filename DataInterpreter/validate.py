@@ -30,7 +30,7 @@ class Validator:
             self.__fields.append(FieldValidator(rule_name, rule_value))
 
     def wash(self, input_list):
-        """return washed  data"""
+        """return washed data"""
         washed = []
         try:
             for field, data in zip(self.__fields, input_list):
@@ -55,8 +55,8 @@ class Validator:
             else:
                 result = True, washed_list
         except TypeError:
-             pass
+            pass
         except IndexError:
-             pass
+            pass
         finally:
             return result

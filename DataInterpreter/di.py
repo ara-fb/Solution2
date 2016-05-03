@@ -1,4 +1,3 @@
-# DataInterpreter - facade for the Model
 from csv import Error as csvErr
 from collections import OrderedDict
 
@@ -14,7 +13,7 @@ class Record:
     def __init__(self, the_id, gender, age, sales, bmi, income):
         self.field_values = OrderedDict()
         self.field_values['id'] = the_id
-        self.field_values['gender']= gender
+        self.field_values['gender'] = gender
         self.field_values['age'] = age
         self.field_values['sales'] = sales
         self.field_values['bmi'] = bmi
@@ -75,8 +74,9 @@ class DataInterpreter:
         for data_list in all_data:
             is_valid, validated = self.__validated(data_list)
             if is_valid:
-                id, gender, age, sales, bmi, income = validated[0], validated[1], validated[2], validated[3], validated[4],validated[5]
-                self.__valid_records.append(Record(id, gender, age, sales, bmi, income))
+                the_id, gender, age, sales, bmi, income = validated[0], validated[1], validated[2],\
+                                                      validated[3], validated[4], validated[5]
+                self.__valid_records.append(Record(the_id, gender, age, sales, bmi, income))
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
@@ -108,8 +108,7 @@ class DataInterpreter:
         :param data_name: name of the data
         :return: data_array of valid [data_name] values
         """
-        return [record.get_by_name(data_name) for record in  self.__valid_records]
-
+        return [record.get_by_name(data_name) for record in self.__valid_records]
 
     def contains_valid_records(self):
         """
@@ -123,4 +122,4 @@ class DataInterpreter:
     # for testing purposes
     def get_all_valid_records(self):
         """only for testsing - return all record data as arrays"""
-        return [record.get_all_as_array() for record in self.__valid_records ]
+        return [record.get_all_as_array() for record in self.__valid_records]
