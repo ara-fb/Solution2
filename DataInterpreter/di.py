@@ -67,7 +67,6 @@ class DataInterpreter:
         generate message about invalid data
         :param all_data: list containing data for multiple records
         """
-        count_invalid = 0
         count_valid = 0
         invalid_data_ids = []
         status = []
@@ -78,10 +77,10 @@ class DataInterpreter:
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
-                count_invalid += 1
         status.append(str(count_valid) + ' records added')
-        if count_invalid:
-            status.append(str(count_invalid) + ' invalid records skipped')
+        if invalid_data_ids:
+            count_invalid = str(len(invalid_data_ids))
+            status.append(count_invalid + ' invalid records skipped')
             status.append('Invalid data at id = ' + ' '.join(invalid_data_ids))
         self.__load_status = '\n'.join(status)
 
