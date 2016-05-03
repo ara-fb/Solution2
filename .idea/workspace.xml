@@ -61,8 +61,8 @@
       <file leaf-file-name="di.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39619377">
-              <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.6559829">
+              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -621,38 +621,56 @@
       <option name="project" value="LOCAL" />
       <updated>1462236744140</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="calculate count_invalid from length of invalid data ids&#10;Tests pass">
+      <created>1462237250990</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1462237250990</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Extract method - invalid_data_mesg() returns string message for invalid data">
+      <created>1462237622340</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1462237622340</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commented out code deleted - Extract method - invalid_data_mesg() returns string message for invalid data">
+      <created>1462237664481</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1462237664481</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 02m 40s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 03m 19s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 03m 57s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 06m 16s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 07m 27s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 08m 49s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 11m 53s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 47m 15s.xml">
-      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 51m 25s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
     <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 12h 59m 43s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 06m 09s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 14m 36s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 15m 05s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 15m 36s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 16m 12s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 20m 42s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 21m 33s.xml">
+      <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_AcceptanceTests_(1) - 2016.05.03 at 13h 23m 41s.xml">
       <configuration name="Nosetests in AcceptanceTests (1)" configurationId="tests" />
     </history-entry>
   </component>
@@ -663,14 +681,14 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008183306" sideWeight="0.30208334" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36006546" sideWeight="0.4732143" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.008183306" sideWeight="0.30208334" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07692308" sideWeight="0.4732143" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008183306" sideWeight="0.6979167" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18821605" sideWeight="0.6979167" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.045826513" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -711,7 +729,10 @@
     <MESSAGE value="Add Field- RULES - private class member of record.  Now validate does the checking, based on whatever rules it is given by DataInterpreter class.&#10;Move Method, Introduce Field&#10;Tests Run" />
     <MESSAGE value="Pep8 - fixing whitespaces" />
     <MESSAGE value="Extract method - __add_valid_record(valid_data) to makecode more readable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extract method - __add_valid_record(valid_data) to makecode more readable" />
+    <MESSAGE value="calculate count_invalid from length of invalid data ids&#10;Tests pass" />
+    <MESSAGE value="Extract method - invalid_data_mesg() returns string message for invalid data" />
+    <MESSAGE value="commented out code deleted - Extract method - invalid_data_mesg() returns string message for invalid data" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented out code deleted - Extract method - invalid_data_mesg() returns string message for invalid data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1004,8 +1025,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataInterpreter/di.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39619377">
-          <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.6559829">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
