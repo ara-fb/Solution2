@@ -72,11 +72,9 @@ class DataInterpreter:
         invalid_data_ids = []
         status = []
         for data_list in all_data:
-            is_valid, validated = self.__validated(data_list)
+            is_valid, validated_data = self.__validated(data_list)
             if is_valid:
-                the_id, gender, age, sales, bmi, income = validated[0], validated[1], validated[2],\
-                                                      validated[3], validated[4], validated[5]
-                self.__valid_records.append(Record(the_id, gender, age, sales, bmi, income))
+                self.__add_validated_record(validated_data)
                 count_valid += 1
             else:
                 invalid_data_ids.append(data_list[0])
@@ -86,6 +84,12 @@ class DataInterpreter:
             status.append(str(count_invalid) + ' invalid records skipped')
             status.append('Invalid data at id = ' + ' '.join(invalid_data_ids))
         self.__load_status = '\n'.join(status)
+
+    def __add_validated_record(self, valid_data):
+        the_id, gender, age, sales, bmi, income = valid_data[0], valid_data[1], valid_data[2],\
+                                                      valid_data[3], valid_data[4], valid_data[5]
+        record = Record(the_id, gender, age, sales, bmi, income)
+        self.__valid_records.append(record)
 
     def __validated(self, input_list):
         """
