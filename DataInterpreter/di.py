@@ -79,9 +79,6 @@ class DataInterpreter:
                 invalid_data_ids.append(data_list[0])
         status.append(str(count_valid) + ' records added')
         if invalid_data_ids:
-            # count_invalid = str(len(invalid_data_ids))
-            # status.append(count_invalid + ' invalid records skipped')
-            # status.append('Invalid data at id = ' + ' '.join(invalid_data_ids))
             status.append(self.__invalid_data_message(invalid_data_ids))
         self.__load_status = '\n'.join(status)
 
