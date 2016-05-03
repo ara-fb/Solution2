@@ -2,7 +2,7 @@ import re
 
 
 class FieldValidator:
-    """wash and validate asingle field"""
+    """wash and validate a single field"""
     def __init__(self, name, rule):
         self.__name = name
         self.__rule = rule
@@ -23,16 +23,11 @@ class Validator:
     """
     def __init__(self):
         self.__fields = []
-        self.__add_all_fields()
 
-    def __add_all_fields(self):
-        self.__fields.append(FieldValidator('id', '[A-Z][0-9]{3}'))
-        self.__fields.append(FieldValidator('gender', '(M|F)'))
-        self.__fields.append(FieldValidator('age', '[0-9]{2}'))
-        self.__fields.append(FieldValidator('sales', '[0-9]{3}'))
-        self.__fields.append(FieldValidator('bmi', '(Normal|Overweight|Obesity|Underweight)'))
-        self.__fields.append(FieldValidator('income', '[0-9]{2,3}'))
-
+    def add_all_fields(self, rules_array):
+        for rule in rules_array:
+            rule_name, rule_value = rule[0], rule[1]
+            self.__fields.append(FieldValidator(rule_name, rule_value))
 
     def wash(self, input_list):
         """return washed  data"""

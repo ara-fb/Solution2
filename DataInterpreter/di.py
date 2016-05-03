@@ -4,10 +4,16 @@ from collections import OrderedDict
 
 
 class Record:
+    __RULES = [('id', '[A-Z][0-9]{3}'),
+               ('gender', '(M|F)'),
+               ('age', '[0-9]{2}'),
+               ('sales', '[0-9]{3}'),
+               ('bmi', '(Normal|Overweight|Obesity|Underweight)'),
+               ('income', '[0-9]{2,3}')]
 
-    def __init__(self, id, gender, age, sales, bmi, income):
-        self.field_values  = OrderedDict()
-        self.field_values['id'] = id
+    def __init__(self, the_id, gender, age, sales, bmi, income):
+        self.field_values = OrderedDict()
+        self.field_values['id'] = the_id
         self.field_values['gender']= gender
         self.field_values['age'] = age
         self.field_values['sales'] = sales
@@ -21,6 +27,10 @@ class Record:
     def get_all_as_array(self):
         return list(self.field_values.values())
 
+    @classmethod
+    def get_rules(cls):
+        return cls.__RULES
+
 
 class DataInterpreter:
     """
@@ -29,12 +39,14 @@ class DataInterpreter:
     extract data by type
     """
 
-
     def __init__(self, persistence, validator):
         self.__valid_records = []
         self.__validator = validator
         self.__persistence = persistence
         self.__load_status = ""
+        # Give the rules to the validator
+        rules = Record.get_rules()
+        self.__validator.add_all_fields(rules)
 
     def load_csv(self, file_path):
         """
@@ -80,7 +92,6 @@ class DataInterpreter:
         wash and validate data using Validator object
         :return: is_valid, validated_list
         """
-
         washed_list = self.__validator.wash(input_list)
         return self.__validator.validated(washed_list)
 

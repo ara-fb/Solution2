@@ -47,7 +47,7 @@ class AcceptanceTestsModel(unittest.TestCase):
         actual_data = self.di.get_all_valid_records()
         actual_status = self.di.get_load_status()
         contains_valid_records = self.di.contains_valid_records()
-        # self.mock_load.assert_called_with(file_path)
+        self.mock_load.assert_called_with(file_path)
         self.assertSequenceEqual(actual_data, expected_data)
         self.assertEquals(expected_status, actual_status)
         self.assertTrue(contains_valid_records)
