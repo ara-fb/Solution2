@@ -117,6 +117,14 @@ class DataInterpreter:
         """
         return [record.get_by_name(data_name) for record in self.__valid_records]
 
+    def get_valid_data_floats(self, data_name):
+        """
+        extract data by type
+        :param data_name: name of the data
+        :return: data_array of valid [data_name] values
+        """
+        return [record.get_by_name(data_name) for record in self.__valid_records]
+
     def contains_valid_records(self):
         """
         return true if there are valid records, otherwise return false

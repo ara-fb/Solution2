@@ -3,7 +3,7 @@ import di
 import validate
 import dicontroller
 import dipersistence
-import chart
+
 
 
 class DataInterpreterCmd(cmd.Cmd):
@@ -47,11 +47,22 @@ class DataInterpreterCmd(cmd.Cmd):
                          '     income: [0-9]{2,3} example 239',
                          'Will validate incorrect case for alphabetic values']))
 
-    def do_chart(self, options):
+    def do_chart(self,options):
         """
         if options are valid input, otherwise do error
         :param options: string, one of CHART_OPTIONS
         """
+        # if options and options in self.CHART_OPTIONS:
+        result = options.split()
+        type = result[0]
+        x_data = result[1]
+        y_data = result[2]
+        self.controller.draw_chart(type, x_data, y_data)
+        # else:
+         #    print("invalid option selected")
+
+    """
+    def do_chart(self, options):
         if options and options in self.CHART_OPTIONS:
             result = options.split()
             x_data = result[0]
@@ -59,6 +70,7 @@ class DataInterpreterCmd(cmd.Cmd):
             self.controller.draw_chart(x_data, y_data)
         else:
             print("invalid option selected")
+    """
 
     def complete_chart(self, text, line, begidx, endidx):
         if not text:
@@ -70,6 +82,9 @@ class DataInterpreterCmd(cmd.Cmd):
         return completions
 
     def help_chart(self):
+        # CHANGED!!! FIX!!!
+        # first option - kind of chart
+        # second option - data to represent
         print('\n'.join(['Generates a chart using plotting options',
                          'Accepted inputs are:',
                          '     age income',
@@ -102,6 +117,6 @@ class DataInterpreterCmd(cmd.Cmd):
 # app/ instantiate and go
 if __name__ == '__main__':
     view = DataInterpreterCmd()
-    controller = dicontroller.Controller(di.DataInterpreter(dipersistence.DiPersistence(), validate.Validator()), view, chart.ChartView())
+    controller = dicontroller.Controller(di.DataInterpreter(dipersistence.DiPersistence(), validate.Validator()), view)
     view.register_controller(controller)
     view.cmdloop()

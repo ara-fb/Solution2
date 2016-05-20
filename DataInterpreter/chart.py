@@ -1,24 +1,44 @@
-# Chart View - doesn't need to be a class yet, but leaving as is for structure
+from chartbase import ChartBase
+import matplotlib.pyplot as plt
+import numpy as np
 
 
-class ChartView:
-    def __intit__(self):
-        self.__my_controller = None
-        self.title = "Data Chart"
+class PlotChart(ChartBase):
+    """
+    plot xdata against y data
+    """
+    def data_setup(self):
+        """
+        hook method for subclasses to overide - manipulate data here, if needed
+        :return: None
+        """
+        self._x_data.sort()
+        self._y_data.sort()
 
-    def set_controller(self, the_controller):
-        self.__my_controller = the_controller
+    def do_plot(self):
+        """
+        hook method for subclasses to overide - drawing is done here
+        :return: None
+        """
+        plt.plot(self._x_data, self._y_data, 'ro', label="",)
 
-    # refactor
-    def draw_plot(self, x_label, y_label, x_data, y_data):
-        x_data.sort()
-        y_data.sort()
-        import matplotlib.pyplot as plt
-        plt.xlabel(x_label)
-        plt.ylabel(y_label)
-        title = '{0} {1} RELATIONSHIP'.format(x_label, y_label)
-        plt.title(title)
-        plt.interactive(False)
-        plt.plot(x_data, y_data, label="")
-        plt.show()
-        # actually - pass to the controller
+
+
+
+class BarChart(ChartBase):
+
+    def data_setup(self):
+        """
+        hook method for subclasses to overide - manipulate data here, if needed
+        :return: None
+        """
+        # self._y_data = np.arange(len(self._y_data))
+        pass
+
+    def do_plot(self):
+        """
+        hook method for subclasses to overide - drawing is done here
+        :return: None
+        """
+        plt.barh(self._y_data, self._x_data, align='center')
+
