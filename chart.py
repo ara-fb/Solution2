@@ -1,6 +1,7 @@
-from chartbase import ChartBase
 import matplotlib.pyplot as plt
 import numpy as np
+
+from DataInterpreter.chartbase import ChartBase
 
 
 class PlotChart(ChartBase):
@@ -23,16 +24,17 @@ class PlotChart(ChartBase):
         plt.plot(self._x_data, self._y_data, 'ro', label="",)
 
 
-
-
 class BarChart(ChartBase):
+    def make_title(self, x_label, y_label):
+        return '{1} {0}'.format(x_label, y_label)
 
     def data_setup(self):
         """
         hook method for subclasses to overide - manipulate data here, if needed
         :return: None
         """
-        # self._y_data = np.arange(len(self._y_data))
+        # self._y_data = np.arange(len())
+        self._y_pos =  np.arange(len(self._y_data))
         pass
 
     def do_plot(self):
@@ -40,5 +42,27 @@ class BarChart(ChartBase):
         hook method for subclasses to overide - drawing is done here
         :return: None
         """
-        plt.barh(self._y_data, self._x_data, align='center')
+        plt.yticks(self._y_pos, self._y_data)
+        plt.barh(self._y_pos, self._x_data, align='center')
 
+
+class PieChart(ChartBase):
+    def make_title(self, x_label, y_label):
+        return '{1} {0}'.format(x_label, y_label)
+
+    def data_setup(self):
+        """
+        hook method for subclasses to overide - manipulate data here, if needed
+        :return: None
+        """
+        # self._y_data = np.arange(len())
+        self._y_pos =  np.arange(len(self._y_data))
+        pass
+
+    def do_plot(self):
+        """
+        hook method for subclasses to overide - drawing is done here
+        :return: None
+        """
+        plt.yticks(self._y_pos, self._y_data)
+        plt.barh(self._y_pos, self._x_data, align='center')

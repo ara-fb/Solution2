@@ -5,7 +5,6 @@ import dicontroller
 import dipersistence
 
 
-
 class DataInterpreterCmd(cmd.Cmd):
     """CMD View for a Data Interpreter."""
     CHART_OPTIONS = ['age income', 'income age', 'age sales', 'sales age', 'income sales', 'sales income']
@@ -47,32 +46,20 @@ class DataInterpreterCmd(cmd.Cmd):
                          '     income: [0-9]{2,3} example 239',
                          'Will validate incorrect case for alphabetic values']))
 
-    def do_chart(self,options):
+    def do_plot(self,options):
         """
         if options are valid input, otherwise do error
         :param options: string, one of CHART_OPTIONS
         """
-        # if options and options in self.CHART_OPTIONS:
-        result = options.split()
-        type = result[0]
-        x_data = result[1]
-        y_data = result[2]
-        self.controller.draw_chart(type, x_data, y_data)
-        # else:
-         #    print("invalid option selected")
-
-    """
-    def do_chart(self, options):
         if options and options in self.CHART_OPTIONS:
             result = options.split()
             x_data = result[0]
             y_data = result[1]
-            self.controller.draw_chart(x_data, y_data)
+            self.controller.draw_plot_chart(x_data, y_data)
         else:
             print("invalid option selected")
-    """
 
-    def complete_chart(self, text, line, begidx, endidx):
+    def complete_plot(self, text, line, begidx, endidx):
         if not text:
             completions = self.CHART_OPTIONS[:]
         else:
@@ -81,10 +68,7 @@ class DataInterpreterCmd(cmd.Cmd):
                            if o.startswith(text)]
         return completions
 
-    def help_chart(self):
-        # CHANGED!!! FIX!!!
-        # first option - kind of chart
-        # second option - data to represent
+    def help_plot(self):
         print('\n'.join(['Generates a chart using plotting options',
                          'Accepted inputs are:',
                          '     age income',
@@ -94,7 +78,14 @@ class DataInterpreterCmd(cmd.Cmd):
                          '     income sales',
                          '     sales income'
                          '     data values are taken from file and only valid values are plotted',
-                         '     Image generated is stored as a .png file ',
+                         '!If there is no data this command will not work!']))
+
+    def do_barchart(self, args):
+        self.controller.draw_bmi_bar_chart()
+
+    def help_barchart(self):
+        print('\n'.join(['Generates a bar chart showing distribution of BMI in valid records',
+                         '     data values are taken from file and only valid values are plotted',
                          '!If there is no data this command will not work!']))
 
     def do_quit(self, args):

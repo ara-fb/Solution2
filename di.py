@@ -30,6 +30,10 @@ class Record:
     def get_rules(cls):
         return cls.__RULES
 
+    @classmethod
+    def get_bmi_options(cls):
+        return ['Normal', 'Overweight', 'Obesity', 'Underweight']
+
 
 class DataInterpreter:
     """
@@ -117,13 +121,22 @@ class DataInterpreter:
         """
         return [record.get_by_name(data_name) for record in self.__valid_records]
 
-    def get_valid_data_floats(self, data_name):
-        """
-        extract data by type
-        :param data_name: name of the data
-        :return: data_array of valid [data_name] values
-        """
-        return [record.get_by_name(data_name) for record in self.__valid_records]
+    def get_bmi_distribution(self):
+        bmi_counts = [0,0,0,0]
+        for record in self.__valid_records:
+            bmi = record.field_values['bmi']
+            if bmi == "Normal":
+                bmi_counts[0] += 1
+            elif bmi == "Overweight":
+                bmi_counts[1] +=1
+            elif bmi == "Obesity":
+                bmi_counts[2] +=1
+            elif bmi == "Underweight":
+                bmi_counts[3] +=1
+        return bmi_counts
+
+    def get_bmi_options(self):
+        return Record.get_bmi_options()
 
     def contains_valid_records(self):
         """
@@ -138,3 +151,6 @@ class DataInterpreter:
     def get_all_valid_records(self):
         """only for testsing - return all record data as arrays"""
         return [record.get_all_as_array() for record in self.__valid_records]
+
+    def count_valid_data(self):
+        return len(self.__valid_records)

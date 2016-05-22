@@ -9,7 +9,7 @@ class ChartBase(metaclass=abc.ABCMeta):
         self._x_data = None
         self._y_data = None
 
-    def __make_title(self, x_label, y_label):
+    def make_title(self, x_label, y_label):
         return '{0} {1} RELATIONSHIP'.format(x_label, y_label)
 
     @abc.abstractmethod
@@ -42,7 +42,7 @@ class ChartBase(metaclass=abc.ABCMeta):
         self.data_setup()
         plt.xlabel(x_label)
         plt.ylabel(y_label)
-        plt.title(self.__make_title(x_label, y_label))
+        plt.title(self.make_title(x_label, y_label))
         plt.interactive(self.__is_interactive)
         self.do_plot()
         plt.show()
