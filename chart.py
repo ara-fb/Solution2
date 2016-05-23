@@ -54,15 +54,17 @@ class PieChart(ChartBase):
         """
         hook method for subclasses to overide - manipulate data here, if needed
         :return: None
+
         """
-        # self._y_data = np.arange(len())
-        self._y_pos =  np.arange(len(self._y_data))
-        pass
+        return
 
     def do_plot(self):
         """
         hook method for subclasses to overide - drawing is done here
         :return: None
         """
-        plt.yticks(self._y_pos, self._y_data)
-        plt.barh(self._y_pos, self._x_data, align='center')
+        plt.xlabel('')
+        plt.ylabel('')
+        colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+        plt.pie(self._x_data, labels=self._y_data, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90)
+        plt.axis('equal')

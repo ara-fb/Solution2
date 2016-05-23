@@ -88,6 +88,14 @@ class DataInterpreterCmd(cmd.Cmd):
                          '     data values are taken from file and only valid values are plotted',
                          '!If there is no data this command will not work!']))
 
+    def do_piechart(self, args):
+        self.controller.draw_bmi_pie_chart()
+
+    def help_piechart(self):
+        print('\n'.join(['Generates a pie chart showing distribution of BMI in valid records',
+                         '     data values are taken from file and only valid values are plotted',
+                         '!If there is no data this command will not work!']))
+
     def do_quit(self, args):
         """Quits you out of the Data Interpreter
         Data is not saved"""

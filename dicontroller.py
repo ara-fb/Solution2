@@ -14,7 +14,7 @@ class Controller:
         self.model.load_csv(file_path)
         self.view.show(self.model.get_load_status())
 
-    def draw_plot_chart(self,x_data_name, y_data_name):
+    def draw_plot_chart(self, x_data_name, y_data_name):
         if self.model.contains_valid_records():
             try:
                     x_data = [float(item)for item in self.model.get_valid_data(x_data_name)]
@@ -32,6 +32,18 @@ class Controller:
                     y_data = self.model.get_bmi_options()
                     x_label = 'Distribution of {} people'.format(str(self.model.count_valid_data()))
                     self.__bar.draw_plot(x_label, 'BMI', x_data, y_data)
+            except ValueError:
+                self.view.show("Chart cannot be drawn, invalid data")
+        else:
+            self.view.show("No valid data loaded. Please load data to generate chart")
+
+    def draw_bmi_pie_chart(self):
+        if self.model.contains_valid_records():
+            try:
+                    x_data = self.model.get_bmi_distribution()
+                    y_data = self.model.get_bmi_options()
+                    x_label = 'Distribution of {} people'.format(str(self.model.count_valid_data()))
+                    self.__pie.draw_plot(x_label, 'BMI', x_data, y_data)
             except ValueError:
                 self.view.show("Chart cannot be drawn, invalid data")
         else:

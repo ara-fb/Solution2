@@ -28,7 +28,7 @@ class ChartBase(metaclass=abc.ABCMeta):
         """
         raise NotImplementedError
 
-    def draw_plot(self, x_label, y_label, x_data, y_data):
+    def draw_plot(self,  x_label, y_label, x_data, y_data,):
         """
         template method called by controller to draw the chart and open it in a window
         :param x_label: label for x axis
