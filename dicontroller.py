@@ -27,7 +27,7 @@ class Controller:
                     x_data = [float(item)for item in self.model.get_valid_data(x_data_name)]
                     y_data = [float(item)for item in self.model.get_valid_data(y_data_name)]
                     title = '{0} {1} RELATIONSHIP'.format(x_data_name.upper(),  y_data_name.upper())
-                    self.__plot.draw_plot(x_data, y_data, title, x_data_name.upper(), y_data_name.upper() )
+                    self.__plot.draw_chart(x_data, y_data, title, x_data_name.upper(), y_data_name.upper() )
             except ValueError:
                 self.view.show("Chart cannot be drawn, invalid data")
         else:
@@ -38,9 +38,8 @@ class Controller:
             try:
                     x_data = self.model.get_bmi_distribution()
                     y_data = self.model.get_bmi_options()
-                    x_label = 'Distribution of {} people'.format(str(self.model.count_valid_data()))
                     title = 'BMI distribution of {} people'.format(str(self.model.count_valid_data()))
-                    self.__bar.draw_plot(x_data, y_data, title, x_label, 'BMI', )
+                    self.__bar.draw_chart(x_data, y_data, title, 'Number of People', 'BMI', )
             except ValueError:
                 self.view.show("Chart cannot be drawn, invalid data")
         else:
@@ -51,9 +50,8 @@ class Controller:
             try:
                     x_data = self.model.get_bmi_distribution()
                     y_data = self.model.get_bmi_options()
-                    x_label = 'Distribution of {} people'.format(str(self.model.count_valid_data()))
                     title = 'BMI distribution of {} people'.format(str(self.model.count_valid_data()))
-                    self.__pie.draw_plot( x_data, y_data, title)
+                    self.__pie.draw_chart( x_data, y_data, title)
             except ValueError:
                 self.view.show("Chart cannot be drawn, invalid data")
         else:

@@ -4,7 +4,6 @@ import abc
 
 class ChartBase(metaclass=abc.ABCMeta):
     def __init__(self):
-        self.__title = "Data Chart"
         self.__is_interactive = False
         self._x_data = None
         self._y_data = None
@@ -24,7 +23,7 @@ class ChartBase(metaclass=abc.ABCMeta):
         """
         pass
 
-    def draw_plot(self, x_data, y_data, title=None, x_label='', y_label=''):
+    def draw_chart(self, x_data, y_data, title=None, x_label='', y_label=''):
         """
         template method called by controller to draw the chart and open it in a window
         """

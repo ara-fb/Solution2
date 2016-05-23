@@ -7,6 +7,8 @@ from chartbase import ChartBase
 class PlotChart(ChartBase):
     """
     plot x data against y data
+    This chart is meaningless from a data analysis point of view,
+    but leaving it in so that extended functionality working with existing code
     """
     def do_setup(self):
         """
