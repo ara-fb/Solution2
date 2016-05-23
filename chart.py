@@ -24,7 +24,7 @@ class PlotChart(ChartBase):
         plt.plot(self._x_data, self._y_data, 'ro', label="",)
 
 
-class BarChart(ChartBase):
+class HorizontalBarChart(ChartBase):
     def make_title(self, x_label, y_label):
         return '{1} {0}'.format(x_label, y_label)
 

@@ -7,7 +7,7 @@ class Controller:
         self.model = di_model
         self.view = di_view
         self.__plot = chart.PlotChart()
-        self.__bar = chart.BarChart()
+        self.__bar = chart.HorizontalBarChart()
         self.__pie = chart.PieChart()
 
     def load_csv(self, file_path):
