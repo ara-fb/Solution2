@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from DataInterpreter.chartbase import ChartBase
+from chartbase import ChartBase
 
 
 class PlotChart(ChartBase):
