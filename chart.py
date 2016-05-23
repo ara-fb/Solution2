@@ -6,11 +6,11 @@ from DataInterpreter.chartbase import ChartBase
 
 class PlotChart(ChartBase):
     """
-    plot xdata against y data
+    plot x data against y data
     """
     def data_setup(self):
         """
-        hook method for subclasses to overide - manipulate data here, if needed
+        sort data array
         :return: None
         """
         self._x_data.sort()
@@ -18,28 +18,29 @@ class PlotChart(ChartBase):
 
     def do_plot(self):
         """
-        hook method for subclasses to overide - drawing is done here
+        plot values
         :return: None
         """
-        plt.plot(self._x_data, self._y_data, 'ro', label="",)
+        plt.plot(self._x_data, self._y_data, label="",)
 
 
 class HorizontalBarChart(ChartBase):
+    """
+    Draw a horizontal bar chart of bmi distribution
+    """
     def make_title(self, x_label, y_label):
         return '{1} {0}'.format(x_label, y_label)
 
     def data_setup(self):
         """
-        hook method for subclasses to overide - manipulate data here, if needed
+        use y_data to calculate points
         :return: None
         """
-        # self._y_data = np.arange(len())
-        self._y_pos =  np.arange(len(self._y_data))
-        pass
+        self._y_pos = np.arange(len(self._y_data))
 
     def do_plot(self):
         """
-        hook method for subclasses to overide - drawing is done here
+        drawing is done here
         :return: None
         """
         plt.yticks(self._y_pos, self._y_data)
@@ -52,19 +53,18 @@ class PieChart(ChartBase):
 
     def data_setup(self):
         """
-        hook method for subclasses to overide - manipulate data here, if needed
+        manipulate data here, if needed
         :return: None
-
         """
-        return
+        pass
 
     def do_plot(self):
         """
-        hook method for subclasses to overide - drawing is done here
+        drawing is done here
         :return: None
         """
         plt.xlabel('')
         plt.ylabel('')
-        colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+        colors = ['gold', 'lightskyblue', 'yellowgreen', 'lightcoral']
         plt.pie(self._x_data, labels=self._y_data, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90)
         plt.axis('equal')
