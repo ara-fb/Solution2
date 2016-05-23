@@ -8,7 +8,7 @@ class PlotChart(ChartBase):
     """
     plot x data against y data
     """
-    def data_setup(self):
+    def do_setup(self):
         """
         sort data array
         :return: None
@@ -28,10 +28,7 @@ class HorizontalBarChart(ChartBase):
     """
     Draw a horizontal bar chart of bmi distribution
     """
-    def make_title(self, x_label, y_label):
-        return '{1} {0}'.format(x_label, y_label)
-
-    def data_setup(self):
+    def do_setup(self):
         """
         use y_data to calculate points
         :return: None
@@ -48,10 +45,8 @@ class HorizontalBarChart(ChartBase):
 
 
 class PieChart(ChartBase):
-    def make_title(self, x_label, y_label):
-        return '{1} {0}'.format(x_label, y_label)
 
-    def data_setup(self):
+    def do_setup(self):
         """
         manipulate data here, if needed
         :return: None
@@ -63,8 +58,6 @@ class PieChart(ChartBase):
         drawing is done here
         :return: None
         """
-        plt.xlabel('')
-        plt.ylabel('')
         colors = ['gold', 'lightskyblue', 'yellowgreen', 'lightcoral']
         plt.pie(self._x_data, labels=self._y_data, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90)
         plt.axis('equal')
