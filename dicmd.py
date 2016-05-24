@@ -3,6 +3,7 @@ import di
 import validate
 import dicontroller
 import dipersistence
+import chart
 
 
 class DataInterpreterCmd(cmd.Cmd):
@@ -115,7 +116,11 @@ class DataInterpreterCmd(cmd.Cmd):
 
 # app/ instantiate and go
 if __name__ == '__main__':
+    data_interpreter = di.DataInterpreter(dipersistence.DiPersistence(), validate.Validator())
     view = DataInterpreterCmd()
-    controller = dicontroller.Controller(di.DataInterpreter(dipersistence.DiPersistence(), validate.Validator()), view)
+    plot_chart = chart.PlotChart()
+    bar_chart = chart.HorizontalBarChart()
+    pie_chart = chart.PieChart()
+    controller = dicontroller.Controller(data_interpreter, view, plot_chart, bar_chart, pie_chart)
     view.register_controller(controller)
     view.cmdloop()

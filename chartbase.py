@@ -11,7 +11,7 @@ class ChartBase(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def do_plot(self):
         """
-        abstract method for subclasses to implement - drawing is done here
+        primitive operation for subclasses to implement - drawing is done here
         :return: None
         """
         raise NotImplementedError

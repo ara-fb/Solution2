@@ -1,14 +1,12 @@
-import chart
-
 
 class Controller:
     # controller for the DataInterpreter
-    def __init__(self, di_model, di_view):
+    def __init__(self, di_model, di_view, plot_chart, bar_chart, pie_chart):
         self.model = di_model
         self.view = di_view
-        self.__plot = chart.PlotChart()
-        self.__bar = chart.HorizontalBarChart()
-        self.__pie = chart.PieChart()
+        self.__plot = plot_chart
+        self.__bar = bar_chart
+        self.__pie = pie_chart
 
     def load_csv(self, file_path):
         self.model.load_csv(file_path)
@@ -27,7 +25,7 @@ class Controller:
                     x_data = [float(item)for item in self.model.get_valid_data(x_data_name)]
                     y_data = [float(item)for item in self.model.get_valid_data(y_data_name)]
                     title = '{0} {1} RELATIONSHIP'.format(x_data_name.upper(),  y_data_name.upper())
-                    self.__plot.draw_chart(x_data, y_data, title, x_data_name.upper(), y_data_name.upper() )
+                    self.__plot.draw_chart(x_data, y_data, title, x_data_name.upper(), y_data_name.upper())
             except ValueError:
                 self.view.show("Chart cannot be drawn, invalid data")
         else:
