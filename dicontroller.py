@@ -1,5 +1,5 @@
 
-class Controller:
+class InterpreterController:
     # controller for the DataInterpreter
     def __init__(self, di_model, di_view, plot_chart, bar_chart, pie_chart):
         self.model = di_model

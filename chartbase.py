@@ -18,7 +18,7 @@ class ChartBase(metaclass=abc.ABCMeta):
 
     def do_setup(self):
         """
-        hook method for subclasses to override or extend - manipulate data here, if needed
+        hook method for subclasses to override - manipulate data here, if needed
         :return: None
         """
         pass

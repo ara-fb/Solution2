@@ -121,6 +121,6 @@ if __name__ == '__main__':
     plot_chart = chart.PlotChart()
     bar_chart = chart.HorizontalBarChart()
     pie_chart = chart.PieChart()
-    controller = dicontroller.Controller(data_interpreter, view, plot_chart, bar_chart, pie_chart)
+    controller = dicontroller.InterpreterController(data_interpreter, view, plot_chart, bar_chart, pie_chart)
     view.register_controller(controller)
     view.cmdloop()
